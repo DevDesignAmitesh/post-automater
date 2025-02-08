@@ -29,7 +29,7 @@ export const linkedinPost = async (
     console.log("Connecting to Browserless...");
     browser = await launch({
       browserWSEndpoint: browserlessUrl,
-      headless: false,
+      headless: true,
       args: ["--no-sandbox", "--disable-setuid-sandbox"],
     });
 
