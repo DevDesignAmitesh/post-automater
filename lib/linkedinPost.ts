@@ -30,6 +30,7 @@ export const linkedinPost = async (
     browser = await launch({
       browserWSEndpoint: browserlessUrl,
       headless: false,
+      args: ["--no-sandbox", "--disable-setuid-sandbox"],
     });
 
     const page: any = await browser.newPage();
