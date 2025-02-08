@@ -9,7 +9,7 @@ const PostPanel = ({ panel }: { panel: string }) => {
   const [password, setPassword] = useState<string>("");
 
   const handlePost = async () => {
-    if (!content || !file) {
+    if (!content || !file || !email || !password) {
       alert("Please provide content and an image/video.");
       return;
     }
